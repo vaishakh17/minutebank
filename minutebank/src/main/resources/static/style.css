@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MinuteBank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>⏳ MinuteBank</h1>
+    <p class="tagline">You get 1,440 minutes every day. Spend them wisely.</p>
+
+    <label for="datePicker">Date</label>
+    <input type="date" id="datePicker">
+
+    <section id="balanceCard" class="card">
+      <p>Balance (minutes)</p>
+      <h2 id="balance">1440</h2>
+      <p id="spentText">Spent: 0 min</p>
+      <p id="overdraftMsg" class="hidden">⚠️ Overdraft! You planned more than 24 hours.</p>
+    </section>
+
+    <section class="card">
+      <h3>Spend time</h3>
+      <input type="text" id="title" placeholder="What did you do?">
+      <select id="category">
+        <option>Study</option>
+        <option>Sleep</option>
+        <option>Work</option>
+        <option>Phone</option>
+        <option>Exercise</option>
+        <option>Family</option>
+        <option>Other</option>
+      </select>
+      <input type="number" id="minutes" placeholder="Minutes" min="1">
+      <button id="addBtn">Add</button>
+      <p id="error" class="error"></p>
+    </section>
+
+    <section class="card">
+      <h3>Entries</h3>
+      <ul id="entryList"></ul>
+    </section>
+  </main>
+  button.secondary 
+  { background: #868e96; 
+	}
+	.bar-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 14px; }
+	.bar-label { width: 36px; }
+	.bar-track { flex: 1; background: #e9ecef; border-radius: 6px; height: 14px; overflow: hidden; }
+	.bar-fill { height: 100%; background: #3b5bdb; }
+	.bar-fill.over { background: #c92a2a; }
+	.bar-value { width: 64px; text-align: right; }
+  <script src="app.js"></script>
+</body>
+</html>
